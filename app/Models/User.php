@@ -47,4 +47,16 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
     }
 
+    // One-To-Many relationship - A User has many Posts
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    // One-To-Many relationship - A User has many Videos
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
+
 }
